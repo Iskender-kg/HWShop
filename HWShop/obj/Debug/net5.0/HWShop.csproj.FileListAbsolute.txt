@@ -68,11 +68,15 @@ C:\Users\A.Iskender\source\repos\HWShop\HWShop\obj\Debug\net5.0\HWShop.dll
 C:\Users\A.Iskender\source\repos\HWShop\HWShop\obj\Debug\net5.0\ref\HWShop.dll
 C:\Users\A.Iskender\source\repos\HWShop\HWShop\obj\Debug\net5.0\HWShop.pdb
 C:\Users\A.Iskender\source\repos\HWShop\HWShop\obj\Debug\net5.0\HWShop.genruntimeconfig.cache
-C:\Users\A.Iskender\source\repos\HWShop\HWShop\obj\Debug\net5.0\Razor\Views\Products\Index.cshtml.g.cs
-C:\Users\A.Iskender\source\repos\HWShop\HWShop\obj\Debug\net5.0\Razor\Views\Products\Privacy.cshtml.g.cs
 C:\Users\A.Iskender\source\repos\HWShop\HWShop\obj\Debug\net5.0\Razor\Views\Products\ProductList.cshtml.g.cs
 C:\Users\A.Iskender\source\repos\HWShop\HWShop\obj\Debug\net5.0\Razor\Views\Products\ListSumm.cshtml.g.cs
 C:\Users\A.Iskender\source\repos\HWShop\HWShop\obj\Debug\net5.0\Razor\Views\Shared\Components\NavigationMenu\Default.cshtml.g.cs
 C:\Users\A.Iskender\source\repos\HWShop\HWShop\obj\Debug\net5.0\Razor\Views\Admin\ProductList.cshtml.g.cs
 C:\Users\A.Iskender\source\repos\HWShop\HWShop\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
 C:\Users\A.Iskender\source\repos\HWShop\HWShop\obj\Debug\net5.0\Razor\Views\Admin\Edit.cshtml.g.cs
+C:\Users\A.Iskender\source\repos\HWShop\HWShop\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\A.Iskender\source\repos\HWShop\HWShop\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\A.Iskender\source\repos\HWShop\HWShop\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\A.Iskender\source\repos\HWShop\HWShop\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\A.Iskender\source\repos\HWShop\HWShop\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\A.Iskender\source\repos\HWShop\HWShop\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs

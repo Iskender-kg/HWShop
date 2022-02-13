@@ -1,6 +1,5 @@
 ﻿@model Product
 @{
-    ViewBag.Title = "Edit Product";
     Layout = "_AdminLayout";
 }
 <form asp-action="Edit" method="post">
@@ -31,7 +30,7 @@
         <input asp-for="Amount" class="form-control" />
     </div>
     <div class="text-center">
-        <button class="btn btn-primary" type="submit">Save</button>
-        <a asp-action="ProductList" class="btn btn-secondary">Cancel</a>
+        <button class="btn btn-primary" type="submit">Сохранить</button>
+        <a asp-action="ProductList" class="btn btn-secondary">Отменить</a>
     </div>
 </form>

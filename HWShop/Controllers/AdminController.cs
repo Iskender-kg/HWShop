@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 using HWShop.Models.Interfaces;
 using HWShop.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HWShop.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
 
@@ -25,6 +27,7 @@ namespace HWShop.Controllers
         [HttpGet]
         public IActionResult Edit(int productId)
         {
+            ViewBag.Title = "Изменение";
             return View(repository.Products.FirstOrDefault(p => p.ProductID == productId));
         }
         [HttpPost]
@@ -33,7 +36,7 @@ namespace HWShop.Controllers
             if (ModelState.IsValid)
             {
                 repository.SaveProduct(product);
-                TempData["message"] = $"{product.Name} has beed saved";
+                TempData["message"] = $"{product.Name} сохранен";
                 return RedirectToAction("ProductList");
             }
             else
@@ -43,6 +46,7 @@ namespace HWShop.Controllers
         }
         public IActionResult Add()
         {
+            ViewBag.Title = "Добавление";
             return View("Edit",new Product());
         }
         [HttpPost]
@@ -51,7 +55,7 @@ namespace HWShop.Controllers
             Product deletedProduct = repository.DeleteProduct(productId);
             if (deletedProduct != null)
             {
-                TempData["message"] = $"{deletedProduct.Name} was deleted";
+                TempData["message"] = $"{deletedProduct.Name} удален";
             }
             return RedirectToAction("ProductList");
         }

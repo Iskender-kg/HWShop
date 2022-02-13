@@ -6,14 +6,28 @@
     <link rel="stylesheet"
           asp-href-include="/lib/bootstrap/dist/**/*.min.css"
           asp-href-exclude="**/*-reboot*,**/*-grid*" />
-    <title>HWShop</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <title>HardWareShop</title>
+    <script>
+        $(function () {
+            $("#menu").menu();
+        });
+    </script>
+    <style>
+        .ui-menu {
+            width: 150px;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar navbar-inverse bg-inverse" role="navigation">
-        <a class="navbar-brand" href="#">HWShop</a>
+        <a class="navbar-brand" href="#">HardWareShop</a>
     </div>
     <div class="row m-1 p-1">
-        <div id="categories" class="col-3">
+        <div>
             @await Component.InvokeAsync("NavigationMenu")
         </div>
         <div class="col-9">
