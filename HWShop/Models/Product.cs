@@ -18,7 +18,7 @@ namespace HWShop.Models
 
         [Required(ErrorMessage ="Please enter Price")]
         [Range(0.01, double.MaxValue,
-            ErrorMessage = "Число должно быть положительным")]
+            ErrorMessage = "Число должно быть больше нуля")]
         public decimal Price { get; set; }
 
         [Required(ErrorMessage = "Пожалуйста укажите категорию товара")]

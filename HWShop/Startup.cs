@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using HWShop.Models;
 using Microsoft.EntityFrameworkCore;
 using HWShop.Models.Interfaces;
+using Microsoft.AspNetCore.Identity;
 
 namespace HWShop
 {
@@ -25,6 +26,9 @@ namespace HWShop
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<HardWareDBContext>(options => options.UseSqlServer(Configuration["Data:HWShopProducts:ConnectionString"]));
+            services.AddDbContext<AppIdentityDbContext>(options => options.UseSqlServer(Configuration["Data:HWShopIdentity:ConnectionString"]));
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppIdentityDbContext>().AddDefaultTokenProviders();
+
             services.AddTransient<IProductRepository, EFProductRepository>();
             services.AddControllersWithViews();
         }
@@ -41,11 +45,9 @@ namespace HWShop
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
 
@@ -88,6 +90,7 @@ namespace HWShop
                     pattern: "{controller=Admin}/{action=ProductList}/{id?}");
             });
             SeedHWData.EnsurePopulated(app);
+            IdentitySeedData.EnsurePopulated(app);
         }
     }
 }
